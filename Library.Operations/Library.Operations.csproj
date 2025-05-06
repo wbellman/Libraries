@@ -13,7 +13,7 @@
         <Revision>$([System.DateTime]::Now.Hour)$([System.DateTime]::Now.Minute)</Revision>
         <Version>$(DomainVersion).$(Year).$(BuildNumber).$(Revision)</Version>
 
-        <PackageId>Library.Operations</PackageId>
+        <PackageId>WarriorDev.Library.Operations</PackageId>
 
         <LangVersion>default</LangVersion>
 
