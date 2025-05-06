@@ -1,0 +1,56 @@
+name: Reusable Build Workflow
+
+on:
+  workflow_call:
+    inputs:
+      library_name:
+        required: true
+        type: string
+      package_url:
+        required: true
+        type: string
+    outputs:
+      package_version:
+        description: "Generated package version"
+        value: ${{ jobs.build.outputs.package_version }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      package_version: ${{ steps.version_step.outputs.VERSION }}
+
+    env:
+      PACKAGE_URL: ${{ inputs.package_url }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Authenticate with GitHub NuGet
+        run: |
+          dotnet nuget add source $PACKAGE_URL \
+            --username ${{ github.actor }} \
+            --password ${{ secrets.GITHUB_TOKEN }} \
+            --store-password-in-clear-text
+
+      - name: Calculate version number
+        id: version_step
+        run: |
+          SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          YEAR=$(date +%y)
+          DAY_OF_YEAR=$(date +%j)
+          HOUR=$(date +%H)
+          MINUTE=$(date +%M)
+          VERSION=1.${YEAR}.${DAY_OF_YEAR}.${HOUR}${MINUTE}
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "SHA=$SHA" >> $GITHUB_ENV
+
+      - name: Run Build & Test Script (PowerShell)
+        shell: pwsh
+        run: ./pipeline-build.ps1 -GitHubCI -LibraryName '${{ inputs.library_name }}' -Version '${{ env.VERSION }}' -SHA '${{ env.SHA }}'
