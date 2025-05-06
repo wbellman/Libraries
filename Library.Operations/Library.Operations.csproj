@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- Version Information -->
+        <DomainVersion>1</DomainVersion>
+        <Year>$([System.DateTime]::Now.Year)</Year>
+        <Month>$([System.DateTime]::Now.Month)</Month>
+        <Day>$([System.DateTime]::Now.Day)</Day>
+        <BuildNumber>$(Month)$(Day)</BuildNumber>
+        <Revision>$([System.DateTime]::Now.Hour)$([System.DateTime]::Now.Minute)</Revision>
+        <Version>$(DomainVersion).$(Year).$(BuildNumber).$(Revision)</Version>
+
+        <PackageId>InsightQuality.Library.Operations</PackageId>
+
+        <LangVersion>default</LangVersion>
+
+    </PropertyGroup>
+</Project>
