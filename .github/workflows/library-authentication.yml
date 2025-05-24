@@ -1,0 +1,21 @@
+name: Build & Publish Library.Operations
+
+on:
+  push:
+    paths:
+      - 'Library.Operations/**'
+      - '.github/workflows/library-authentication.yml'
+      - '.github/workflows/_build_publish.yml'
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+      - 'release/**'
+      - 'hotfix/**'
+
+jobs:
+  build-and-publish:
+    uses: ./.github/workflows/_build_publish.yml
+    with:
+      library_name: "Library.Authentication"
+      package_url: "https://nuget.pkg.github.com/wbellman/index.json"
