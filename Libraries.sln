@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Operations", "Libra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Authentication", "Library.Authentication\Library.Authentication.csproj", "{1B463C18-5F3F-4E8A-9464-1CB2AD1008A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.Configuration.Reader", "Tools\Tools.Configuration.Reader\Tools.Configuration.Reader.csproj", "{481CEBB4-E321-4B1B-8E99-51D52FAFD00A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{1383D511-B3A0-4C96-A2B0-0CDCC0290D6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,12 @@ Global
 		{1B463C18-5F3F-4E8A-9464-1CB2AD1008A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B463C18-5F3F-4E8A-9464-1CB2AD1008A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B463C18-5F3F-4E8A-9464-1CB2AD1008A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{481CEBB4-E321-4B1B-8E99-51D52FAFD00A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{481CEBB4-E321-4B1B-8E99-51D52FAFD00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481CEBB4-E321-4B1B-8E99-51D52FAFD00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{481CEBB4-E321-4B1B-8E99-51D52FAFD00A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{481CEBB4-E321-4B1B-8E99-51D52FAFD00A} = {1383D511-B3A0-4C96-A2B0-0CDCC0290D6B}
 	EndGlobalSection
 EndGlobal
