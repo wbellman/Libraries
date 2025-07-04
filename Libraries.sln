@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{1383D511
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Prompt.Composition", "Library.Prompt.Composition\Library.Prompt.Composition.csproj", "{F0C1AF01-750B-476D-A908-F5C81845076C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libraries.Json", "Libraries.Json\Libraries.Json.csproj", "{A57AF711-3A79-467A-B849-395F4F55BDA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Json", "Library.Json\Library.Json.csproj", "{A57AF711-3A79-467A-B849-395F4F55BDA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
