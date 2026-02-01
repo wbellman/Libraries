@@ -12,6 +12,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Prompt.Composition"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Json", "Library.Json\Library.Json.csproj", "{A57AF711-3A79-467A-B849-395F4F55BDA2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6ED8465E-C2DD-4D0C-941E-D1A831FEBFA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functional", "Functional", "{ECE42315-E68C-4AE2-AEA9-069DC16BF179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamlPlayground", "YamlPlayground\YamlPlayground.csproj", "{3D10B5B6-689B-4C88-B42B-4D670282B772}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,8 +44,14 @@ Global
 		{A57AF711-3A79-467A-B849-395F4F55BDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A57AF711-3A79-467A-B849-395F4F55BDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A57AF711-3A79-467A-B849-395F4F55BDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D10B5B6-689B-4C88-B42B-4D670282B772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D10B5B6-689B-4C88-B42B-4D670282B772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D10B5B6-689B-4C88-B42B-4D670282B772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D10B5B6-689B-4C88-B42B-4D670282B772}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{481CEBB4-E321-4B1B-8E99-51D52FAFD00A} = {1383D511-B3A0-4C96-A2B0-0CDCC0290D6B}
+		{ECE42315-E68C-4AE2-AEA9-069DC16BF179} = {6ED8465E-C2DD-4D0C-941E-D1A831FEBFA0}
+		{3D10B5B6-689B-4C88-B42B-4D670282B772} = {ECE42315-E68C-4AE2-AEA9-069DC16BF179}
 	EndGlobalSection
 EndGlobal

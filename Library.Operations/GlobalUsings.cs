@@ -7,3 +7,4 @@ global using System.Threading.Tasks;
 global using Library.Operations.Indicators;
 
 global using static Library.Operations.Functions.Outcomes;
+global using static System.Console;
