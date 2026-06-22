@@ -62,18 +62,13 @@ It calls `/_build_publish.yml` with:
 
 Triggered on pushes to `main`, `develop`, `feature/**`, `release/**`, and `hotfix/**`
 when files change under:
-- `Library.Operations/**` (as currently written in the workflow)
+- `Library.Authentication/**`
 - `/.github/workflows/library-authentication.yml`
 - `/.github/workflows/_build_publish.yml`
-
-With the filter currently written, pushes that only modify `Library.Authentication/**`
-will not match this path condition.
 
 It calls `/_build_publish.yml` with:
 - `library_name: "Library.Authentication"`
 - GitHub Packages URL for `wbellman`
-
-> TODO(wbellman): why — confirm whether the path filter in `library-authentication.yml` should target `Library.Authentication/**`.
 
 ## How the pieces fit
 
