@@ -3,7 +3,7 @@ name: Build & Publish Library.Operations
 on:
   push:
     paths:
-      - 'Library.Operations/**'
+      - 'Library.Authentication/**'
       - '.github/workflows/library-authentication.yml'
       - '.github/workflows/_build_publish.yml'
     branches:
