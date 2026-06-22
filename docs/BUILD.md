@@ -66,6 +66,9 @@ when files change under:
 - `/.github/workflows/library-authentication.yml`
 - `/.github/workflows/_build_publish.yml`
 
+With the filter currently written, pushes that only modify `Library.Authentication/**`
+will not match this path condition.
+
 It calls `/_build_publish.yml` with:
 - `library_name: "Library.Authentication"`
 - GitHub Packages URL for `wbellman`
