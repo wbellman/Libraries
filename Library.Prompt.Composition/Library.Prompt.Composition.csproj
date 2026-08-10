@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- Version Information -->
+        <DomainVersion>1</DomainVersion>
+        <Year>$([System.DateTime]::Now.Year)</Year>
+        <Month>$([System.DateTime]::Now.Month)</Month>
+        <Day>$([System.DateTime]::Now.Day)</Day>
+        <BuildNumber>$(Month)$(Day)</BuildNumber>
+        <Revision>$([System.DateTime]::Now.Hour)$([System.DateTime]::Now.Minute)</Revision>
+        <Version>$(DomainVersion).$(Year).$(BuildNumber).$(Revision)</Version>
+
+        <PackageId>LogicalArtisan.Library.Prompt.Composition</PackageId>
+        <Authors>Will Bellman</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="logicalartisan.library.json" Version="1.25.185.1727-3fd8c0f-beta" />
+      <PackageReference Include="LogicalArtisan.Library.Operations" Version="1.25.160.1848" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+      <PackageReference Include="Scriban" Version="6.2.1" />
+      <PackageReference Include="YamlDotNet" Version="16.3.0" />
+    </ItemGroup>
+
+</Project>

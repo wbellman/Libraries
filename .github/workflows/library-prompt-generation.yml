@@ -1,0 +1,21 @@
+name: Build & Publish Library.Prompt.Generation
+
+on:
+  push:
+    paths:
+      - 'Library.Operations/**'
+      - '.github/workflows/library-prompt-generation.yml'
+      - '.github/workflows/_build_publish.yml'
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+      - 'release/**'
+      - 'hotfix/**'
+
+jobs:
+  build-and-publish:
+    uses: ./.github/workflows/_build_publish.yml
+    with:
+      library_name: "Library.Prompt.Generation"
+      package_url: "https://nuget.pkg.github.com/wbellman/index.json"
